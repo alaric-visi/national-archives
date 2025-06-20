@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>National Archives Discovery</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  </header>
+  <main class="blog-content">
+    <h1>National Archives</h1>
+    <p class="instruction">
+      A random dip into the National Archives Discovery catalogue.
+    </p>
+    <div id="loading"><div class="spinner"></div></div>
+    <div id="lucky-card">
+      <p><em>Search term:</em> <span id="word">…</span></p>
+      <h2 id="title">Loading…</h2>
+      <p><strong>Held by:</strong> <span id="heldBy"></span></p>
+      <p><strong>Catalogue ref:</strong> <span id="ref"></span></p>
+      <p><strong>Date:</strong> <span id="dates"></span></p>
+      <button id="toggleExtra" class="small" hidden>More details ▾</button>
+      <div id="extra" hidden>
+        <p id="ctx"></p>
+        <p id="note"></p>
+        <p id="place"></p>
+      </div>
+      <p id="desc"></p>
+      <p><a id="link" target="_blank" rel="noopener">Open in Discovery ↗︎</a></p>
+      <button id="roll">Roll again</button>
+    </div>
+  </main>
+  <script type="module" src="national-archive.js" defer></script>
+</body>
+</html>

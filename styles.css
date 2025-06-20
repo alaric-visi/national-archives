@@ -1,0 +1,111 @@
+
+html,body{
+    height:100%;
+    margin:0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display:flex;
+    flex-direction:column;
+    background:#121212;
+  }
+
+  main.blog-content{flex:1 0 auto;}
+  main.blog-content{
+    max-width:800px;
+    margin:0 auto;
+    padding:clamp(1rem,4vw,2rem) 1rem;
+    color:#eee;
+  }
+
+  .blog-content h1{
+    margin-bottom:clamp(.75rem,2vw,1rem);
+    font-size:clamp(1.8rem,6vw,2.5rem);
+    text-align:center;
+    color:#fff;
+  }
+  
+  .blog-content p.instruction{
+    text-align:center;
+    color:#ccc;
+    margin-bottom:clamp(1.25rem,4vw,2rem);
+    font-size:clamp(.95rem,3.8vw,1.05rem);
+  }
+  
+  #lucky-card{
+    background:#161b22;
+    border:1px solid #30363d;
+    border-radius:1rem;
+    padding:clamp(1.25rem,5vw,2rem) clamp(1.25rem,6vw,2.5rem);
+    box-shadow:0 8px 16px rgba(0,0,0,.45);
+    text-align:center;
+    margin:0 auto clamp(2rem,6vw,2.5rem);
+    max-width:min(640px,90vw);
+  }
+
+  #lucky-card h2{
+    font-size:clamp(1.1rem,4.8vw,1.25rem);
+    margin:.8rem 0 .4rem;
+    color:#fff;
+  }
+
+  #lucky-card p{
+    margin:.3rem 0;
+    color:#ccc;
+    line-height:1.6;
+    font-size:clamp(.9rem,3.8vw,1rem);
+  }
+
+  #lucky-card a{
+    color:#58a6ff;
+    text-decoration:none;
+    word-break:break-word;
+  }
+
+  #lucky-card a:hover{text-decoration:underline}
+  #lucky-card button{
+    margin-top:1.25rem;
+    padding:.75rem 1.6rem;
+    font-size:clamp(1rem,4.2vw,1.05rem);
+    border:none;
+    border-radius:.6rem;
+    background:#238636;
+    color:#fff;
+    cursor:pointer;
+    transition:background .2s;
+  }
+  #lucky-card button:hover{background:#2ea043}
+
+  #toggleExtra.small{
+   margin-top:1rem;
+   font-size:0.9rem;
+   background:#30363d;
+   }
+  
+  #toggleExtra.small:hover{background:#4b5560;}
+  
+  @media (max-width:350px){
+    #lucky-card button{width:100%;}
+  }
+  
+  #loading{
+    position:fixed;
+    inset:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:rgba(18,18,18,.85);
+    visibility:hidden;
+    opacity:0;
+    transition:opacity .25s;
+    z-index:10;
+  }
+
+  #loading.active{visibility:visible;opacity:1;}
+  .spinner{
+    width:48px;height:48px;
+    border:6px solid rgba(255,255,255,.25);
+    border-top-color:#58a6ff;
+    border-radius:50%;
+    animation:spin 1s linear infinite;
+  }
+
+  @keyframes spin{to{transform:rotate(360deg)}}
